@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render unchanged 1`] = `
+<DocumentFragment>
+  <nav
+    class="flex flex-row justify-between items-center py-4 px-6 bg-white border-b border-gray-400"
+  >
+    <p>
+      <a
+        href="/"
+        title="Logo"
+      >
+        My website
+      </a>
+    </p>
+    <ul
+      class="flex flex-row items-center"
+    >
+      <li
+        class="mr-4 font-sfPro"
+      >
+        <a
+          class="hover:bg-gray-200 text-xl px-2.5 py-5"
+          href="/item1"
+        >
+          Item 1
+        </a>
+      </li>
+      <li
+        class="mr-4 font-sfPro"
+      >
+        <a
+          class="hover:bg-gray-200 text-xl px-2.5 py-5"
+          href="/item2"
+        >
+          Item 2
+        </a>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;

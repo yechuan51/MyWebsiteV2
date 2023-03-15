@@ -29,3 +29,4 @@ jobs:
         working-directory: ./website
         run: |
           npm run build
+          npm run test
