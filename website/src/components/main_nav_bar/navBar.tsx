@@ -1,5 +1,3 @@
-import styles from "./navBar.module.css";
-import { NextPage } from "next";
 import Link from "next/link";
 
 export type NavBarItemType = {
@@ -24,7 +22,10 @@ export default function NavBarComp(props: NavBarCompPropsType) {
       <ul className="flex flex-row items-center">
         {items.map((item) => (
           <li className="mr-4 font-sfPro" key={item.key}>
-            <Link href={item.href} className="hover:bg-gray-200 text-xl">
+            <Link
+              href={item.href}
+              className="hover:bg-gray-200 text-xl px-2.5 py-5"
+            >
               {item.displayText}
             </Link>
           </li>
