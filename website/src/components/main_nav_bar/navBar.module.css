@@ -1,0 +1,51 @@
+/* container gives the component a white background, padding, and a shadow */
+.cotainer {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    color: black;
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navItemsList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navItemsList li {
+    display: inline-block;
+}
+
+.navItemsList li a {
+    display: block;
+    padding: 10px 20px;
+    color: black;
+    font-weight: bold;
+    font-family: 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+
+.navItemsList li a:hover {
+    color: #0277bd;
+    background-color: aliceblue;
+}

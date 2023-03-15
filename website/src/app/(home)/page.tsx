@@ -1,11 +1,3 @@
-const MainHomePage: () => JSX.Element = () => {
-    return (
-        <div>
-            <main>
-                <p>Home page WIP.</p>
-            </main>
-        </div>
-    );
-};
-
-export default MainHomePage;
+export default function MainHomePage() {
+  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+}
