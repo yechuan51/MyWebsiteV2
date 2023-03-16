@@ -22,7 +22,7 @@ export default function NavBarComp(props: NavBarCompPropsType) {
               My Blog
             </a>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden sm:flex items-baseline">
             <ul className="ml-10 flex items-baseline space-x-4">
               {items.map((item) => (
                 <li className="mr-4 font-sfPro" key={item.key}>
