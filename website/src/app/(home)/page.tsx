@@ -1,3 +1,9 @@
+import CurrentTimeComp from "@/components/client/utils/currentTime";
+
 export default function MainHomePage() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="flex justify-end items-start top-0 right-0">
+      <CurrentTimeComp />
+    </div>
+  );
 }
