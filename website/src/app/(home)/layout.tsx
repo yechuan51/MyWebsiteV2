@@ -12,12 +12,14 @@ const Layout: NextPage<LayoutPropsType> = (props: LayoutPropsType) => {
   ];
 
   return (
-    <div className="flex-container-column h-screen p-2.5">
+    <>
       <header>
         <NavBarComp items={navBarItems} />
       </header>
-      {props.children}
-    </div>
+      <div className="flex-container-column h-screen p-2.5">
+        {props.children}
+      </div>
+    </>
   );
 };
 
