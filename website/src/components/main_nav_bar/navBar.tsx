@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "./navBar.module.css";
 
 export type NavBarItemType = {
   key: string;
@@ -13,7 +14,9 @@ export type NavBarCompPropsType = {
 export default function NavBarComp(props: NavBarCompPropsType) {
   const items = props.items;
   return (
-    <nav className="flex flex-row justify-between items-center py-4 px-6 bg-white border-b border-gray-400">
+    <nav
+      className={`flex flex-row justify-between items-center py-4 px-6 bg-white border-b border-gray-400 ${styles.navbar}`}
+    >
       <p>
         <Link href="/" title="Logo">
           My website
