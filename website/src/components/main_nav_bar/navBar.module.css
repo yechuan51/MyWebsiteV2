@@ -1,7 +1,7 @@
 .navbar {
-  background: linear-gradient(to right, #fda085, #f6d365, #fda085);
+  background: linear-gradient(to right, #fda085, #f6d365, #3fd9ff);
   background-size: 600% 100%;
-  animation: gradient 6s ease-in-out infinite;
+  animation: gradient 12s ease-in-out infinite;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
 }
 
