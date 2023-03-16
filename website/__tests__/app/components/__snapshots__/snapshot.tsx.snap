@@ -3,7 +3,7 @@
 exports[`render unchanged 1`] = `
 <DocumentFragment>
   <nav
-    class="flex flex-row justify-between items-center py-4 px-6 bg-white border-b border-gray-400"
+    class="flex flex-row justify-between items-center py-4 px-6 bg-white border-b border-gray-400 navbar"
   >
     <p>
       <a
