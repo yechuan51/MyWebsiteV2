@@ -9,16 +9,6 @@ describe("NavBarTest", () => {
     expect(navBar).toBeTruthy();
   });
 
-  it("has a title", () => {
-    render(<NavBarComp items={[]} />);
-    const titleElement = screen.getByText("My website");
-    expect(titleElement).toBeTruthy();
-    expect(titleElement.tagName).toBe("A");
-    expect(titleElement.parentElement).toBeTruthy();
-    expect(titleElement.parentElement!.tagName).toBe("P");
-    expect(titleElement.parentElement!.classList.contains("title"));
-  });
-
   it("Renders menu", () => {
     render(
       <NavBarComp

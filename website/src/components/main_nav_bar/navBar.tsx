@@ -14,26 +14,30 @@ export type NavBarCompPropsType = {
 export default function NavBarComp(props: NavBarCompPropsType) {
   const items = props.items;
   return (
-    <nav
-      className={`flex flex-row justify-between items-center py-4 px-6 bg-white border-b border-gray-400 ${styles.navbar}`}
-    >
-      <p>
-        <Link href="/" title="Logo">
-          My website
-        </Link>
-      </p>
-      <ul className="flex flex-row items-center">
-        {items.map((item) => (
-          <li className="mr-4 font-sfPro" key={item.key}>
-            <Link
-              href={item.href}
-              className="hover:bg-gray-200 text-xl px-2.5 py-5"
-            >
-              {item.displayText}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <nav className="bg-gray-900 py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between">
+          <div className="flex-shrink-0 flex items-center">
+            <a href="/" className="text-white font-bold text-xl">
+              My Blog
+            </a>
+          </div>
+          <div className="hidden sm:flex items-baseline">
+            <ul className="ml-10 flex items-baseline space-x-4">
+              {items.map((item) => (
+                <li className="mr-4 font-sfPro" key={item.key}>
+                  <Link
+                    href={item.href}
+                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    {item.displayText}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 }
