@@ -3,40 +3,54 @@
 exports[`render unchanged 1`] = `
 <DocumentFragment>
   <nav
-    class="flex flex-row justify-between items-center py-4 px-6 bg-white border-b border-gray-400 navbar"
+    class="bg-gray-900 py-4"
   >
-    <p>
-      <a
-        href="/"
-        title="Logo"
-      >
-        My website
-      </a>
-    </p>
-    <ul
-      class="flex flex-row items-center"
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
     >
-      <li
-        class="mr-4 font-sfPro"
+      <div
+        class="flex justify-between"
       >
-        <a
-          class="hover:bg-gray-200 text-xl px-2.5 py-5"
-          href="/item1"
+        <div
+          class="flex-shrink-0 flex items-center"
         >
-          Item 1
-        </a>
-      </li>
-      <li
-        class="mr-4 font-sfPro"
-      >
-        <a
-          class="hover:bg-gray-200 text-xl px-2.5 py-5"
-          href="/item2"
+          <a
+            class="text-white font-bold text-xl"
+            href="/"
+          >
+            My Blog
+          </a>
+        </div>
+        <div
+          class="hidden sm:flex items-baseline"
         >
-          Item 2
-        </a>
-      </li>
-    </ul>
+          <ul
+            class="ml-10 flex items-baseline space-x-4"
+          >
+            <li
+              class="mr-4 font-sfPro"
+            >
+              <a
+                class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                href="/item1"
+              >
+                Item 1
+              </a>
+            </li>
+            <li
+              class="mr-4 font-sfPro"
+            >
+              <a
+                class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                href="/item2"
+              >
+                Item 2
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </nav>
 </DocumentFragment>
 `;
