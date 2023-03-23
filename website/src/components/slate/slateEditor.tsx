@@ -14,6 +14,10 @@ import { withHistory } from "slate-history";
 import Toolbar from "./toolbar";
 import { MarkButton } from "./button";
 import Leaf from "./leaf";
+import FormatBoldIcon from "@mui/icons-material/FormatBold";
+import FormatItalicIcon from "@mui/icons-material/FormatItalic";
+import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
+import CodeIcon from "@mui/icons-material/Code";
 
 type CustomElement = { type: "paragraph"; children: CustomText[] };
 type CustomText = {
@@ -55,10 +59,10 @@ const SlateEditorComp = () => {
     <div className="border border-gray-300 bg-gray-100 rounded-md p-2">
       <Slate editor={editor} value={initialValue}>
         <Toolbar className="text-blue-700 flex flex-container">
-          <MarkButton format="bold" icon="format_bold" />
-          <MarkButton format="italic" icon="format_italic" />
-          <MarkButton format="underline" icon="format_underlined" />
-          <MarkButton format="code" icon="code" />
+          <MarkButton format="bold" icon={<FormatBoldIcon />} />
+          <MarkButton format="italic" icon={<FormatItalicIcon />} />
+          <MarkButton format="underline" icon={<FormatUnderlinedIcon />} />
+          <MarkButton format="code" icon={<CodeIcon />} />
         </Toolbar>
         <Editable
           renderLeaf={renderLeaf}

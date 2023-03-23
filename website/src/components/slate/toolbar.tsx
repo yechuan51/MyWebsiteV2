@@ -19,7 +19,6 @@ const Toolbar: React.FC<PropsWithChildren<ToolbarProps>> = (props) => {
 
   return (
     <div className="menu">
-      {/* Menu content goes here */}
       <Menu {...props} ref={menuRef} />
     </div>
   );

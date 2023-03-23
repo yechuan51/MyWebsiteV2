@@ -10,8 +10,13 @@
     "test": "jest --testPathPattern=__tests__"
   },
   "dependencies": {
+    "@emotion/css": "^11.10.6",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@heroicons/react": "^2.0.16",
     "@material-tailwind/react": "^1.4.2",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.14",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "mongoose": "^7.0.2",
