@@ -56,11 +56,10 @@ const toggleMark = (editor: BaseEditor & ReactEditor, format: string) => {
   }
 };
 
-export const MarkButton = ({ format, icon, ...rest }: MarkButtonProps) => {
+export const MarkButton = ({ format, icon }: MarkButtonProps) => {
   const editor = useSlate();
   return (
     <Button
-      {...rest}
       active={isMarkActive(editor, format)}
       onMouseDown={(event: { preventDefault: () => void }) => {
         event.preventDefault();

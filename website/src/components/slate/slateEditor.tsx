@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo } from "react";
 import { createEditor, BaseEditor, Descendant } from "slate";
-
 import {
   Slate,
   Editable,
@@ -11,13 +10,13 @@ import {
   RenderLeafProps,
 } from "slate-react";
 import { withHistory } from "slate-history";
-import Toolbar from "./toolbar";
-import { MarkButton } from "./button";
-import Leaf from "./leaf";
 import FormatBoldIcon from "@mui/icons-material/FormatBold";
 import FormatItalicIcon from "@mui/icons-material/FormatItalic";
 import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
 import CodeIcon from "@mui/icons-material/Code";
+import Toolbar from "./toolbar";
+import { MarkButton } from "./button";
+import Leaf from "./leaf";
 
 type CustomElement = { type: "paragraph"; children: CustomText[] };
 type CustomText = {
@@ -46,8 +45,7 @@ const initialValue: Descendant[] = [
 ];
 
 const SlateEditorComp = () => {
-  const editor = useMemo(() => withHistory(withReact(createEditor())), []);
-  const hello = <p>Hello</p>;
+  const editor = useMemo(() => withReact(withHistory(createEditor())), []);
 
   const renderLeaf = useCallback(
     (props: RenderLeafProps) => <Leaf {...props} />,
@@ -58,7 +56,7 @@ const SlateEditorComp = () => {
   return (
     <div className="border border-gray-300 bg-gray-100 rounded-md p-2">
       <Slate editor={editor} value={initialValue}>
-        <Toolbar className="text-blue-700 flex flex-container">
+        <Toolbar className="flex flex-container">
           <MarkButton format="bold" icon={<FormatBoldIcon />} />
           <MarkButton format="italic" icon={<FormatItalicIcon />} />
           <MarkButton format="underline" icon={<FormatUnderlinedIcon />} />
@@ -68,6 +66,8 @@ const SlateEditorComp = () => {
           renderLeaf={renderLeaf}
           className="bg-white border border-gray-300 p-2 rounded-md"
           placeholder="Enter some plain text..."
+          autoFocus
+          spellCheck
         />
       </Slate>
     </div>

@@ -9,7 +9,9 @@ type MenuProps = {
 const Menu = forwardRef<HTMLDivElement, PropsWithChildren<MenuProps>>(
   (props, ref) => {
     return (
-      <div {...props} ref={ref} className={props.className || undefined} />
+      <div ref={ref} className={props.className || undefined}>
+        {props.children}
+      </div>
     );
   }
 );
