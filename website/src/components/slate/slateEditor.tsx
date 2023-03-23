@@ -15,7 +15,7 @@ import FormatItalicIcon from "@mui/icons-material/FormatItalic";
 import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
 import CodeIcon from "@mui/icons-material/Code";
 import Toolbar from "./toolbar";
-import { MarkButton } from "./button";
+import MarkButton from "./markButton";
 import Leaf from "./leaf";
 
 type CustomElement = { type: "paragraph"; children: CustomText[] };
