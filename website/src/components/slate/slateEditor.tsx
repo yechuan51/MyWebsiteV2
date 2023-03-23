@@ -19,6 +19,7 @@ import Toolbar from "./toolbar";
 import MarkButton from "./markButton";
 import Leaf from "./leaf";
 import CustomButton from "./customButton";
+import { saveBlogToDb } from "./utils/dbUtils";
 
 type CustomElement = { type: "paragraph"; children: CustomText[] };
 type CustomText = {
@@ -67,6 +68,7 @@ const SlateEditorComp = () => {
             icon={<SaveIcon />}
             onClick={() => {
               console.log("Pressed");
+              saveBlogToDb("title", "content");
             }}
           />
         </Toolbar>
