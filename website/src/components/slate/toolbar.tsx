@@ -12,7 +12,10 @@ const Toolbar: React.FC<PropsWithChildren<ToolbarProps>> = (props) => {
 
   return (
     <div className="menu">
-      <Menu ref={menuRef} className={`inline-block ${props.className}`}>
+      <Menu
+        ref={menuRef}
+        className={`inline-block mx-2 space-x-2 ${props.className}`}
+      >
         {props.children}
       </Menu>
     </div>
