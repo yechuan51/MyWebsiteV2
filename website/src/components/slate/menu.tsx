@@ -1,14 +1,18 @@
 "use client";
 
-import React, { forwardRef, Ref } from "react";
+import React, { forwardRef, PropsWithChildren } from "react";
 
-interface MenuProps {
-  children: React.ReactNode;
-}
+type MenuProps = {
+  className?: string;
+};
 
-const Menu = forwardRef<HTMLDivElement, MenuProps>((props, ref) => {
-  return <div ref={ref}>{props.children}</div>;
-});
+const Menu = forwardRef<HTMLDivElement, PropsWithChildren<MenuProps>>(
+  (props, ref) => {
+    return (
+      <div {...props} ref={ref} className={props.className || undefined} />
+    );
+  }
+);
 
 Menu.displayName = "Menu";
 export default Menu;
