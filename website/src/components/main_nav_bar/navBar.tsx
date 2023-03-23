@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from "./navBar.module.css";
 
 export type NavBarItemType = {
   key: string;
