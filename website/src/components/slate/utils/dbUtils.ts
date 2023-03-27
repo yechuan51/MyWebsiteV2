@@ -1,7 +1,9 @@
 "use client";
 
-import { useSlate } from "slate-react";
+import { CustomEditor } from "../slateEditor";
+import { extractMarkdown } from "./remarkParser";
 
+// Save a blog to the database.
 export async function saveBlogToDb(title: string, content: string) {
   const response = await fetch("/api/blog", {
     method: "POST",
@@ -11,5 +13,9 @@ export async function saveBlogToDb(title: string, content: string) {
     body: JSON.stringify({ title, content }),
   });
   const data = await response.json();
-  console.log(data);
+}
+
+export function SaveMarkdownToDb(editor: CustomEditor) {
+  const { title, markdown } = extractMarkdown(editor);
+  saveBlogToDb(title, markdown);
 }

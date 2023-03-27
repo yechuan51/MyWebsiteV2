@@ -9,7 +9,7 @@ import {
   ReactEditor,
   RenderLeafProps,
 } from "slate-react";
-import { withHistory } from "slate-history";
+import { HistoryEditor, withHistory } from "slate-history";
 import FormatBoldIcon from "@mui/icons-material/FormatBold";
 import FormatItalicIcon from "@mui/icons-material/FormatItalic";
 import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
@@ -19,7 +19,7 @@ import Toolbar from "./toolbar";
 import MarkButton from "./markButton";
 import Leaf from "./leaf";
 import CustomButton from "./customButton";
-import { saveBlogToDb } from "./utils/dbUtils";
+import { SaveMarkdownToDb } from "./utils/dbUtils";
 
 type CustomElement = { type: "paragraph"; children: CustomText[] };
 type CustomText = {
@@ -29,10 +29,11 @@ type CustomText = {
   italic?: boolean;
   underline?: boolean;
 };
+export type CustomEditor = BaseEditor & ReactEditor & HistoryEditor;
 
 declare module "slate" {
   interface CustomTypes {
-    Editor: BaseEditor & ReactEditor;
+    Editor: CustomEditor;
     Element: CustomElement;
     Text: CustomText;
   }
@@ -67,8 +68,7 @@ const SlateEditorComp = () => {
           <CustomButton
             icon={<SaveIcon />}
             onClick={() => {
-              console.log("Pressed");
-              saveBlogToDb("title", "content");
+              SaveMarkdownToDb(editor);
             }}
           />
         </Toolbar>
