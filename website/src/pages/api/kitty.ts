@@ -13,14 +13,11 @@ export default async function handler(
   // Return 200 status and a dummy JSON response.
 
   if (req.method === "GET") {
-    console.log("GET");
     mongoose.connect(process.env.MONGODB_URI as string);
-
     const kittens = await mKitten.find();
     console.log(kittens);
     res.status(200).json({ count: kittens.length });
   } else if (req.method === "POST") {
-    console.log("POST");
     mongoose.connect(process.env.MONGODB_URI as string);
 
     // Access the name from request.
